@@ -1,0 +1,21 @@
+Determine the Number of Files and Folders in `/usr/share`
+
+Run the following commands:
+ls /usr/share/ | wc -l
+ls /usr/share/ | wc -l > ~/value.txt
+
+
+
+Determine the Number of Unpacked Entries in `/var/log/dpkg.log`
+
+Run the following commands:
+cat /var/log/dpkg.log | grep unpacked | wc -l
+cat /var/log/dpkg.log | grep unpacked | wc -l >> ~/value.txt
+
+
+
+Determine the Total Number of Entries in `/var/log/dpkg.log`
+
+Run the following commands:
+cat /var/log/dpkg.log | wc -l
+cat /var/log/dpkg.log | wc -l >> ~/value.txt
