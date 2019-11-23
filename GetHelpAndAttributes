@@ -1,0 +1,24 @@
+Determine How Many Lines the File Contains
+
+The documentation found in the man and info pages suggests that the -l option may be used to determine the total number of lines.
+wc -l longfile.txt
+Run the command and output the result into a new file named value.txt.
+wc -l longfile.txt > value.txt
+
+
+
+Determine the Number of Characters on the Longest Line
+
+The documentation found in the man and info pages suggests that the -L option may be used to determine the number of characters on the longest line.
+wc -L longfile.txt
+Run the command and append the result to the value.txt file.
+wc -L longfile.txt >> value.txt
+
+
+
+Determine the Total Number of Characters in the File
+
+The documentation found in the man and info pages suggests that the -m option may be used to determine the total number of characters in the file.
+wc -m longfile.txt
+Run the command and append the result to the value.txt file.
+wc -m longfile.txt >> value.txt
