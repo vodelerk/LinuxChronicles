@@ -1,0 +1,31 @@
+Copy/Move the Requested Files and Folders
+
+Copy ~/Practice/Test to ~/Report/.
+cp -R Practice/Test/ Report
+Rename and move ~/Report/sos_commands/filesys/mount_-l to ~/Report/mounts.txt.
+cd Report/
+mv sos_commands/filesys/mount_-l mounts.txt
+
+
+
+
+Remove the Requested Files and Folders
+
+Remove etc/selinux/.
+rm -rf etc/selinux/
+Remove var/log/boot.log.
+rm -rf var/log/boot.log
+Remove anything in proc/ that is or starts with a number.
+rm -rf proc/[1-9]*
+Remove anything in etc/ that ends in .conf.
+rm -rf etc/*.conf
+Remove anything in sys/module that starts with ip6t.
+rm -rf sys/module/ip6t*
+
+
+
+
+Create a New File in `~/Report/`
+
+Create a new file named Done.txt in ~/Report/.
+touch Done.txt
