@@ -1,0 +1,33 @@
+Determine How Many Words Start with the Letter "x"
+
+Run the following command:
+cat /usr/share/dict/words | grep -E "^x" | wc -l
+Send the output to ~/value.txt.
+cat /usr/share/dict/words | grep -E "^x" | wc -l >> ~/value.txt
+
+
+
+Determine How Many Words Start with the Letter "x"
+
+Run the following command:
+cat /usr/share/dict/words | grep -E "^x" | wc -l
+Send the output to ~/value.txt.
+cat /usr/share/dict/words | grep -E "^x" | wc -l >> ~/value.txt
+
+
+
+Determine Which Word Starts with "l", Ends in "x", and Contains 5 Characters Total
+
+Run the following command:
+cat /usr/share/dict/words | grep -E "^l...x$"
+Send the output to ~/value.txt.
+cat /usr/share/dict/words | grep -E "^l...x$" >> ~/value.txt
+
+
+
+Determine How Many 3-Letter Words Start with the Letters "y" or "z"
+
+Run the following command:
+cat /usr/share/dict/words | grep -E "^y..$|^z..$" | wc -l
+Send the output to ~/value.txt.
+cat /usr/share/dict/words | grep -E "^y..$|^z..$" | wc -l >> ~/value.txt
