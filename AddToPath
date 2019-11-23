@@ -1,0 +1,12 @@
+#List the current environment variables, and locate the $PATH variable.
+
+env
+
+#Examine the $PATH variable.
+echo $PATH
+
+#Since the path to our scripts directory is missing, we need to append it to the $PATH variable. We can do so with the following command:
+PATH=$PATH:$HOME/scripts/
+
+#If we log out, we'll lose our ability to run the script without specifiying the path. So we need to make our change permanent. We can do so on this Ubuntu 16.04 system by modifying the ~/.profile file.
+echo 'PATH="$PATH:$HOME/scripts"' >> ~/.profile
