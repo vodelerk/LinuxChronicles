@@ -1,0 +1,12 @@
+Use Absolute Paths to Move the File
+
+Use cat and redirection to place the contents of the file Practice/Test/free into a new file named value.txt in your home directory.
+cat /home/cloud_user/Practice/Test/free > /home/cloud_user/value.txt
+
+
+Use Relative Paths to Move the File
+
+Change to the /usr/share directory.
+cd /usr/share
+Use cat and redirection to place the contents of the file Practice/Test/sys/fs/xfs/stats/stats into the newly created file value.txt in your home directory.
+cat ../../home/cloud_user/Practice/Test/sys/fs/xfs/stats/stats >> ../../home/cloud_user/value.txt
