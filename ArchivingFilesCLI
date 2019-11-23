@@ -1,0 +1,31 @@
+Create a Normal Archive
+
+Use the following command to create a tarball of the ~/Practice folder named archive.tar:
+tar cvf archive.tar Practice/
+
+
+Create a Normal Archive
+
+Use the following command to create a tarball of the ~/Practice folder named archive.tar:
+tar cvf archive.tar Practice/
+
+
+Create a Compressed Archive
+
+Now create another tarball, but this time, compress it during creation with the following command:
+tar czf archive.tgz Practice/
+
+
+Compress the Normal Archive
+
+Use the gzip utility to compress the first tarball (archive.tar) with maximum compression:
+gzip -9 archive.tar
+This will compress the file and rename it archive.tar.gz.
+
+
+
+Extract the File `Practice/Test/version.txt` from `archive.tar.gz`
+
+Use the following command to extract the file Practice/Test/version.txt from the compressed archive archive.tar.gz:
+tar xzf archive.tar.gz Practice/Test/version.txt
+This will extract the file to the existing path and overwrite the file if it exists.
