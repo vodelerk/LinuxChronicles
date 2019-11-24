@@ -1,0 +1,34 @@
+Attempt to `curl` the Address on the Local Host
+
+Run the following command:
+curl -I localhost
+
+
+
+Determine How Many Times 10.0.1.10 Has Accessed the Website
+
+Run the following command:
+sudo cat /var/log/httpd/access_log | grep -E "^10.0.1.10" | wc -l
+
+
+
+Attempt to Reach the Web Server via `http://PUBLIC_IP/index.html`
+
+Run the following command:
+sudo tail -f /var/log/httpd/access_log
+Attempt to reach the website via public IP (not 10.0.1.10) from your computer as http://PUBLIC_IP/index.html.
+
+
+Find the New Entry in the Log
+
+Run the following command to view the entry that was appended to the end of the log:
+sudo tail -f /var/log/httpd/access_log
+Note the "200" after "HTTP/1.1"; this signifies a valid destination.
+
+
+
+Attempt to Reach the Web Server via `http://PUBLIC_IP/server.html`
+
+While running tail on the access log, attempt to reach the /server/html path.
+curl http://PUBLIC_IP/server.html
+Note the 404 status code; this signifies the path did not resolve to a valid page.
