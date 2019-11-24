@@ -1,0 +1,53 @@
+Determine How Much Storage Is Available
+
+Run the following command:
+df -h
+Add the answer to the line below the corresponding question in hw_questions.txt.
+
+
+
+Determine the Number of CPUs/Cores
+
+Run any of the following commands:
+sudo lshw
+cat /proc/cpuinfo
+lscpu
+Add the answer to the line below the corresponding question in hw_questions.txt.
+
+
+
+Determine the CPU Speed
+
+Run one of the following commands:
+
+sudo lshw
+cat /proc/cpuinfo
+Add the answer to the line below the corresponding question in hw_questions.txt.
+
+
+
+Determine How Much RAM Is Installed
+
+Run any of the following commands:
+sudo lshw
+cat /proc/meminfo
+sudo dmidecode
+Add the answer to the line below the corresponding question in hw_questions.txt.
+
+
+
+Determine How Much Swap Is Being Used
+
+Run the following command:
+free -m
+Add the answer to the line below the corresponding question in hw_questions.txt.
+
+
+
+
+Determine the BIOS Version
+
+Run one of the following commands:
+sudo lshw
+sudo dmidecode
+Add the answer to the line below the corresponding question in hw_questions.txt.
