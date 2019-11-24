@@ -1,0 +1,49 @@
+Determine How Many Processes Are Currently Running
+
+Run the following command:
+ps aux | grep -v grep | wc -l
+
+
+Determine the Current System Load
+
+Run one of the following commands:
+uptime
+cat /proc/loadavg
+top
+
+
+Determine How Many Processes Are Running as `cloud_user`
+
+Run one of the following commands:
+ps -u cloud_user | wc -l
+ps aux | grep -v grep | grep -E "^cloud" | wc -l
+
+
+
+Determine the PID of the `xfce4-session` Process
+
+Run the following command:
+ps aux | grep xfce4-session | grep -v grep
+
+
+
+Determine How Many Threads the `xfce4-session` Process Is Using
+
+Determine the PID:
+ps aux | grep xfce4-session | grep -v grep
+View the current threads reported in the PID's status:
+cat /proc/PROCESS_PID/status | grep Threads
+
+
+
+Write a Small Shell Script that Returns the Number of Threads in a Process
+
+Create a new file named /home/cloud_user/bin/threads.sh, and add the following script:
+
+ #!/bin/bash
+
+ if [ -n $1 ]
+ then
+   _pid=$(ps aux | grep -E "$1\$" | grep -v grep | grep -v threads.sh | awk '{print $2}')
+   cat /proc/$_pid/status | grep Threads
+ fi
