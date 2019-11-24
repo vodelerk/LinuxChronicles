@@ -1,2 +1,2 @@
 # LinuxChronicles
-couple of bash scripts and formulas
+couple of bash scripts and formulas (journey)
