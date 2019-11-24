@@ -1,0 +1,54 @@
+Determine What Options Should Be Used with the `ssh` Command
+
+View the man page for the ssh command, and determine the option to use to disable host key checking.
+man ssh
+The syntax to use is:
+ssh -o StrictHostKeyChecking=no user@host
+
+
+Build a Script from the Required Commands
+
+Create a bin folder in cloud_user's home directory.
+mkdir bin
+Use vim or nano to create the file lab.sh in the new bin folder.
+vim bin/lab.sh
+Start with the shebang at the top of the file.
+#!/bin/bash
+Add a line to set a variable for the login user.
+login_user=cloud_user
+Add a line to ssh using the variable from above and taking the first parameter as the host address.
+ssh -o StrictHostKeyChecking=no $login_user@$1
+The completed script should look like this:
+#!/bin/bash
+login_user=cloud_user
+ssh -o StrictHostKeyChecking=no $login_user@$1
+check_circle
+Execute and Verify the Script
+keyboard_arrow_down
+check_circle
+Add the New `bin` Directory to the `PATH` Variable
+keyboard_arrow_down
+
+
+
+
+Execute and Verify the Script
+
+Save the file, and make it executable.
+chmod u+x bin/lab.sh
+Run the script, passing 10.0.1.10 as the first parameter to be assigned to $1.
+./bin/lab.sh 10.0.1.10
+It should immediately prompt for cloud_user's password and not prompt for RSA fingerprint acceptance.
+
+
+
+
+Add the New `bin` Directory to the `PATH` Variable
+
+Append to the .bashrc file in cloud_user's home directory to add the new bin folder to the PATH environment variable.
+echo 'PATH="$HOME/bin:$HOME/.local/bin:$PATH"' >> .bashrc
+Source .bashrc to pick up the change.
+source .bashrc
+Verify that you can run lab.sh without specifying the path to the script.
+lab.sh 10.0.1.10
+
