@@ -1,0 +1,28 @@
+Determine the IP Address
+
+Run the following command:
+sudo ip addr show
+Note the IPv4 and IPv6 addresses in the output.
+
+
+Determine the MAC Address
+
+Run the following command:
+sudo ip addr show
+Note the MAC address in the output.
+
+
+
+Determine the Gateway
+
+Show the routing table.
+sudo ip route show
+Note the gateway in the output.
+
+
+
+Determine the DNS Server
+
+Show the DNS nameserver:
+cat /etc/resolv.conf | grep nameserver
+Note the DNS server in the output.
