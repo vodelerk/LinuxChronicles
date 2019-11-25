@@ -1,0 +1,17 @@
+Determine the UID Scheme
+
+Run the following command:
+cat /etc/passwd
+Determine the UID range for system users (root, chrony, etc.).
+Determine the UID range for standard users (cloud_user, jbillings, etc.).
+Determine the absolute highest UID value for the current users.
+Choose a higher value for where UIDs on a remote host should begin.
+
+
+
+Determine the GID Scheme
+
+Run the following command:
+cat /etc/group
+Determine the highest GID value.
+Choose a higher value for where GIDs on a remote host should begin.
