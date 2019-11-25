@@ -1,0 +1,26 @@
+Create the ~/ bin Directory and Add it to the PATH
+
+Make the ~/bin directory.
+mkdir bin
+Add ~/bin to the $PATH environment variable.
+echo 'PATH=$HOME/bin:$PATH' >> .bashrc
+
+#resource bashrc
+
+
+
+Create the Symbolic Links
+
+Create a symbolic link ("symlink") for rpm_verify.
+ln -s /usr/lib/rpm/rpmdb_verify bin/rpm_verify
+Create a symlink for rpm_dump.
+ln -s /usr/lib/rpm/rpmdb_dump bin/rpm_dump
+Create a symlink for rpm_load.
+ln -s /usr/lib/rpm/rpmdb_load bin/rpm_load
+
+
+
+Test the Symbolic Links
+
+Verify that the rpm_verify symlink works.
+rpm_verify /var/lib/rpm/Packages
