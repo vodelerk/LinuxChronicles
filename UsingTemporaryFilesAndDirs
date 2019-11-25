@@ -1,0 +1,25 @@
+Retrieve and Unpack the Archive
+
+Change to the /tmp directory.
+cd /tmp
+Use wget to retrieve the file.
+wget https://github.com/mscjr/LA/raw/master/RH342/sosreport-ip-10-0-1-11-2019-03-22-wxoxhnk.tar.xz
+Unpack the archive.
+tar xf sosreport-ip-10-0-1-11-2019-03-22-wxoxhnk.tar.xz
+
+
+
+
+Create a Temporary File from the Directory Listing
+
+Create a temporary file from a recursive directory listing of the archive folder.
+tmp_file=$(mktemp)
+ls -R sosreport-ip-10-0-1-11-2019-03-22-wxoxhnk/ >> $tmp_file
+
+
+
+
+Move the `version.txt` File to a More Persistent Temporary Directory
+
+Move the version.txt file to /var/tmp.
+mv sosreport-ip-10-0-1-11-2019-03-22-wxoxhnk/version.txt /var/tmp
